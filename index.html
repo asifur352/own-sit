@@ -146,12 +146,19 @@ const today = () => new Date().toISOString().slice(0,10);
 
 createApp({
  setup(){
-  const categories = [
-   {name:'Khabar',icon:'🍛',color:'#f97316'},{name:'Bazar',icon:'🛒',color:'#22c55e'},
-   {name:'Jatayat',icon:'🚌',color:'#3b82f6'},{name:'Bari Bhara',icon:'🏠',color:'#8b5cf6'},
-   {name:'Bill (Bijli/Gas/Net)',icon:'💡',color:'#eab308'},{name:'Shikkha',icon:'📚',color:'#06b6d4'},
-   {name:'Cikitsha',icon:'💊',color:'#ef4444'},{name:'Binodon',icon:'🎬',color:'#ec4899'},
-   {name:'Pushak',icon:'👕',color:'#14b8a6'},{name:'Onnanno',icon:'📦',color:'#64748b'}];
+   const categories = [
+            { name: "FOOD", icon: "🍛", color: "#f97316" },
+            { name: "Bazar", icon: "🛒", color: "#22c55e" },
+            { name: "Transport cost", icon: "🚌", color: "#3b82f6" },
+            { name: "Bari Bhara", icon: "🏠", color: "#8b5cf6" },
+            { name: "Bill (Bijli/Gas/Net)", icon: "💡", color: "#eab308" },
+            { name: "Education Cost", icon: "📚", color: "#06b6d4" },
+            { name: "Hospital Bill", icon: "💊", color: "#ef4444" },
+            { name: "Entertenment", icon: "🎬", color: "#ec4899" },
+            { name: "Shopping", icon: "👕", color: "#14b8a6" },
+            { name: "Others", icon: "📦", color: "#64748b" },
+          ];
+
 
   const load = (k,d)=>{ try{ return JSON.parse(localStorage.getItem(k)) ?? d }catch(e){ return d } };
   const month = ref(today().slice(0,7));
